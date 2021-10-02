@@ -6,6 +6,10 @@ const connection = require("./database/database");
 const categoriesController = require("./categories/CategoriesController");
 const articlesController = require("./articles/ArticlesController");
 
+//Models
+const Article = require("./articles/Article");
+const Category = require("./categories/Category");
+
 
 //View Engine
 app.set('view engine','ejs');
@@ -23,7 +27,7 @@ connection
             .then(() =>{
                 console.log("Conexão feita com sucesso!");
             }).catch((error) =>{
-                console.log(error);
+                  console.log(error);
             })
 
 
